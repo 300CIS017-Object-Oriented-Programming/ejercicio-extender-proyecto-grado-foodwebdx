@@ -62,7 +62,7 @@ encargada este efectuara y tendrá disponibilidad de diversas funciones, siendo 
 9. Modifique el programa para que en la evaluación del acta pueda agregar información para: observaciones adicionales y restricciones que limitan la calificación final. Modifique la generación del pdf para incluir esta información 
 10. Agregue una nueva opción de menú llamada ``Estadísticas``.  Presente ahí: la cantidad de proyectos de grado aplicados y de investigación que se han registrado en el sistema.  La cantidad de proyectos de grado que tienen jurados externos y la cantidad que tienen proyectos internos así como la cantidad de proyectos de grado que tienen una nota superior a 4.8 
 11. Modifique el PDF para que donde aparece ``Nombre Jurado Uno``  y ``Nombre Jurado Dos`` aparezcan los nombres reales de los jurados
-![img.png](img/firmas.png)
+![img.png](img/firmas.png).
 12. Explore la librería plotly. Intente hacer alguna gráfica que represente estadísticas almacenadas en el sistema de información.
 
 ## Entregables

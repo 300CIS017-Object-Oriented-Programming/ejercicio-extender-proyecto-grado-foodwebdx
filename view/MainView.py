@@ -5,6 +5,9 @@ Asignatura: POO
 """
 
 import streamlit as st
+import plotly.express as px
+import plotly.graph_objs as go
+
 
 from streamlit_option_menu import option_menu
 from controller.Controlador import Controlador

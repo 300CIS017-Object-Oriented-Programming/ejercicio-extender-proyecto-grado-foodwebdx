@@ -1,5 +1,8 @@
 import os
 
+import plotly.express as px
+import plotly.graph_objs as go
+
 from model.InfoActa import InfoActa
 from datetime import datetime
 from controller.ControladorPDF import ControladorPdf
@@ -195,6 +198,10 @@ def show_stadistics(st, controlador):
     st.write(f"Cantiad de proyectos con jurados internos: {cantInt}")
     st.write(f"Cantiaf de proyectos con jurados externos: {cantExt}")
     st.write(f"Cantidad de proyectos con nota mayor a 4.8: {cantBig}")
+
+    data_general = px.data.gapminder().query("country == 'Colombia'")
+    fig = px.bar(data_general, x='year', y='pop')
+    fig.show()
 
 
 

@@ -72,6 +72,8 @@ class MainView:
             exportar_acta(st, self.controller)
 
 
+
+
 # Main call
 if __name__ == "__main__":
     gui = MainView()

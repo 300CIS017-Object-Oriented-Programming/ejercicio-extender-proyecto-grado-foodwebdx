@@ -170,4 +170,31 @@ def exportar_acta(st, controlador):
         st.warning("No Hay Ningún Estudiante Calificado Actualmente.")
 
 
+def show_stadistics(st, controlador):
+    st.title("Estadisticas")
+    cantExt = 0
+    cantInt = 0
+    cantAp = 0
+    cantInves = 0
+    cantBig = 0
+
+    for acta in controlador.actas:
+        if (acta.tipo_jurado2 == "Externo") or (acta.tipo_jurado1 == "Externo"):
+            cantExt += 1
+        if (acta.tipo_jurado2 == "Interno") or (acta.tipo_jurado1 == "Interno"):
+            cantInt += 1
+        if acta.nota_final > 4.8:
+            cantBig += 1
+        if acta.tipo_trabajo == "Aplicado":
+            cantAp += 1
+        if acta.tipo_trabajo == "Investigación":
+            cantInves += 1
+
+    st.write(f"candidad de proyectos De Investigación: {cantInves}")
+    st.write(f"Cantidad de proyectos Aplicados: {cantAp}")
+    st.write(f"Cantiad de proyectos con jurados internos: {cantInt}")
+    st.write(f"Cantiaf de proyectos con jurados externos: {cantExt}")
+    st.write(f"Cantidad de proyectos con nota mayor a 4.8: {cantBig}")
+
+
 

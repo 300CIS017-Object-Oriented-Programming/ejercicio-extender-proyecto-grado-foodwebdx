@@ -50,6 +50,8 @@ class ControladorPdf:
                     self.pdf.cell(145, 7, txt=f"Calificación parcial: {round(criterio.nota, 2)}", ln=0, align='L')
                     self.pdf.cell(100, 7, txt=f"Ponderación: {criterio.porcentaje * 100}%", ln=1, align='L')
                     self.pdf.multi_cell(185, 7, txt=f"Observación: {criterio.observacion}", align='L')
+                    self.pdf.multi_cell(185, 7, txt=f"Observación adicionales: {criterio.observacionad}", align='L')
+                    self.pdf.multi_cell(185, 7, txt=f"Restricciones: {criterio.restricciones}", align='L')
                     self.pdf.multi_cell(185, 5,
                                    txt="_____________________________________________________________________________________",
                                    align='L')

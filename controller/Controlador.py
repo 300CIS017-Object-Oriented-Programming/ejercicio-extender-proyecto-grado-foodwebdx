@@ -82,4 +82,10 @@ class Controlador:
         palabra = primero + " punto " + segundo
         return palabra
 
+    def show_directories(self):
+
+        directory = ["Luisa Fernanda Rincon", "Juan Carlos Martinez", "Maria Constanza Pabon",
+                     "Gloria Inés Álvarez","G erardo M Sarria M", "Luis Eduardo Tobón", "Juan Pablo García", "Frank Martinez",
+                      "Carlos Ramirez"]
+        return directory
 

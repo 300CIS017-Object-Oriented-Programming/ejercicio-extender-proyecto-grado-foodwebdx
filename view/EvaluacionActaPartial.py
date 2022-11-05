@@ -21,7 +21,9 @@ def agregar_acta(st, controlador):
     with col3:
         info_acta_obj.tipo_trabajo = st.selectbox('Tipo', ('Aplicado', 'Investigación'))
     with col5:
-        info_acta_obj.director = st.text_input("Director")
+        info_acta_obj.director = st.selectbox("Director", (controlador.show_directories()[0], controlador.show_directories()[1], controlador.show_directories()[2],controlador.show_directories()[3]
+                                                           ,controlador.show_directories()[4],controlador.show_directories()[5],controlador.show_directories()[6],
+                                                           controlador.show_directories()[7],controlador.show_directories()[8]))
     with col6:
         info_acta_obj.codirector = st.text_input("Codirector", "N.A")
     with col7:
@@ -29,7 +31,7 @@ def agregar_acta(st, controlador):
     with col8:
         info_acta_obj.jurado2 = st.text_input("Jurado #2")
     with col9:
-        info_acta_obj.fecha_presentacion= st.text_input("Ingrese la fecha de presentacion")
+        info_acta_obj.fecha_presentacion= st.text_input("Fecha de presentacion")
     enviado_btn = st.button("Enviar")
 
     # Cuando se oprime el botón se agrega a la lista

@@ -24,9 +24,10 @@ class ControladorPdf:
         self.pdf.cell(200, 10, txt="ACTA DE EVALUACIÓN DE GRADO", ln=1, align='C')
         self.pdf.cell(200, 10, txt="Facultad de Ingeniería.", ln=2, align='C')
         self.pdf.set_font("times", size=12)
-        self.pdf.multi_cell(185, 6,
-                       txt="Trabajo de grado denominado: Análisis de la similitud en el código fuente de dos programas de computador usando técnicas de inteligencia artificial",
-                       align='L')
+        for acta in controlador.actas:
+
+            if acta.autor == acta_seleccionada:
+                self.pdf.multi_cell(185, 6, txt=f"Trabajo de grado denominado: {acta.nombre_trabajo}", align='L')
         for acta in controlador.actas:
             if acta.autor == acta_seleccionada:
                 flag = True

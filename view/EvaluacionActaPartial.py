@@ -182,9 +182,9 @@ def show_stadistics(st, controlador):
     cantBig = 0
 
     for acta in controlador.actas:
-        if (acta.tipo_jurado2 == "Externo") or (acta.tipo_jurado1 == "Externo"):
+        if (acta.jurado1_tipo == False) or (acta.jurado2_tipo == False):
             cantExt += 1
-        if (acta.tipo_jurado2 == "Interno") or (acta.tipo_jurado1 == "Interno"):
+        if (acta.jurado1_tipo == True) or (acta.jurado2_tipo == True):
             cantInt += 1
         if acta.nota_final > 4.8:
             cantBig += 1
